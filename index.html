@@ -23,11 +23,29 @@
   <body ng-controller="FxosController as FXC">
     <!-- This code is in the public domain. Enjoy! -->
     <h1>Hello World</h1>
-    <button
-      ng-click="FXC.sendSms('+1 (555) 123-9876', 'test message')"
-      type="submit"
-      class="btn btn-primary"
-      >Test SMS</button>
+    <form
+      ng-submit="FXC.sendSms(FXC.smsNumber, FXC.smsMessage)"
+      >
+      <input
+        ng-model="FXC.smsNumber"
+        type="tel"
+        placeholder="ex: +1 (555) 123-9876"
+        class="form-control"
+        ng-required
+        required="required"
+        />
+      <textarea
+        ng-model="FXC.smsMessage"
+        placeholder="ex: I love you because you are special."
+        class="form-control"
+        ng-required
+        required="required"
+        ></textarea>
+      <button
+        type="submit"
+        class="btn btn-primary"
+        >Test SMS</button>
+    </form>
   </body>
 
 </html>
