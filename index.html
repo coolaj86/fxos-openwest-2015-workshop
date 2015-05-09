@@ -6,7 +6,7 @@
 
     <title>Hello World</title>
 
-    <link rel="stylesheet" href="css/bootstrap.yeti.min.css">
+    <link rel="stylesheet" href="styles/bootstrap.yeti.min.css">
     <style>
       body {
         border: 1px solid black;
@@ -20,9 +20,26 @@
 
   </head>
 
-  <body ng-controller="FxosController">
+  <body ng-controller="FxosController as FXC">
     <!-- This code is in the public domain. Enjoy! -->
     <h1>Hello World</h1>
+    <button
+      ng-click="FXC.sendSms('+1 (555) 123-9876', 'test message')"
+      type="submit"
+      class="btn btn-primary"
+      >Test SMS</button>
   </body>
 
 </html>
+
+
+
+
+
+
+
+
+
+
+
+

@@ -11,5 +11,11 @@
   "developer": {
     "name": "Your name",
     "url": "http://example.com"
+  },
+  "type": "certified",
+  "permissions": {
+    "sms": {
+      "description": "Required to send SMS text messages"
+    }
   }
 }
